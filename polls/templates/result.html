@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>نتیجه ی جستجو</title>
+  <h1 style="text-align: center;">The Birth of Modern Physics{{ info.year }}</h1>
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+  body {
+    background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/86/62/C9qv6y.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  body {
+    font-family: "Trirong", serif;
+  }
+
+  table,
+  td,
+  th {
+    border: 1px solid #ddd;
+    text-align: right;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+
+  tr:hover {
+    background-color: rgb(231, 216, 75);
+  }
+
+  a:link,
+  a:visited {
+    color: black;
+    border: 10px solid rgb(219, 233, 23);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  a:hover,
+  a:active {
+    background-color: rgb(224, 184, 75);
+    color: rgb(0, 0, 0);
+  }
+</style>
+
+<body>
+
+  <table style="width:100%">
+    <tr style="font-size: 30px;">
+      <th>دلیل دریافت نوبل</th>
+      <th>ملیت</th>
+      <th>نام برنده نوبل</th>
+      <th>سال</th>
+    </tr>
+    <ul>
+      {% for info in information %}
+      <div class="containar">
+        <tr style="font-size: 20px;">
+          <th>{{ info.reason }}</th>
+          <th>{{ info.nationality }}</th>
+          <th>{{ info.name }}</th>
+          <th>{{ info.year }}</th>
+        </tr>
+      </div>
+      {% endfor %}
+    </ul>
+  </table>
+  <br>
+  <a href="">بازگشت به صفحه جستجو</a>
+</body>
+
+</html>
